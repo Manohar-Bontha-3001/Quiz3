@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Data API</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
+    <div class="container">
+        <h1>Earthquake Data API</h1>
+        <div class="form-section">
+            <h2>Query Time Range</h2>
+            <form id="query-time-range-form">
+                <label for="start_time">Start Time:</label>
+                <input type="number" id="start_time" name="start_time" required>
+                <label for="end_time">End Time:</label>
+                <input type="number" id="end_time" name="end_time" required>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="time-range-results"></div>
+        </div>
+        
+        <div class="form-section">
+            <h2>Query Specific Time and Net Value</h2>
+            <form id="query-specific-time-net-value-form">
+                <label for="time">Time:</label>
+                <input type="number" id="time" name="time" required>
+                <label for="net_value">Net Value:</label>
+                <input type="text" id="net_value" name="net_value" required>
+                <label for="count">Count:</label>
+                <input type="number" id="count" name="count" required>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="specific-time-net-value-results"></div>
+        </div>
+        
+        <div class="form-section">
+            <h2>Modify Attribute</h2>
+            <form id="modify-attribute-form">
+                <label for="time">Time:</label>
+                <input type="number" id="time" name="time" required>
+                <label for="latitude">Latitude:</label>
+                <input type="number" step="any" id="latitude" name="latitude" required>
+                <label for="longitude">Longitude:</label>
+                <input type="number" step="any" id="longitude" name="longitude" required>
+                <label for="depth">Depth:</label>
+                <input type="number" step="any" id="depth" name="depth" required>
+                <label for="mag">Magnitude:</label>
+                <input type="number" step="any" id="mag" name="mag" required>
+                <label for="net">Net:</label>
+                <input type="text" id="net" name="net" required>
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" required>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="modify-attribute-results"></div>
+        </div>
+    </div>
+    <script src="/static/js/scripts.js"></script>
 </body>
-
 </html>
